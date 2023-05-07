@@ -111,48 +111,14 @@ img {
   line-height: 1.5;
   padding: 6px 18px;
   border-radius: 30px;
+  border: transparent;
   background-color: var(--pressed-state);
 }
 .order-btn:hover,
 .order-btn:focus {
   background-color: var(--primary-brand);
 }
-.page-footer {
-  padding-top: 100px;
-  padding-bottom: 102px;
-  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
-}
-.footer-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 129px;
-}
-.footer-logo {
-  margin-right: 148px;
-}
-.info {
-  display: flex;
-  justify-content: space-between;
-}
-.info-list {
-  display: flex;
-  gap: 20px;
-}
-.info-link {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.6667;
-  text-decoration-line: underline;
-  color: var(--color-text);
-}
-.info-paragraph {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.6667;
-  color: var(--text);
-}
+
 .section-hero-container {
   display: flex;
   align-items: center;
@@ -197,7 +163,7 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1, 4;
+  line-height: 1.4;
   color: var(--text);
   margin-bottom: 16px;
 }
@@ -236,6 +202,106 @@ img {
   width: 526.17px;
   margin-bottom: 20px;
 }
-.paragraph-offerings-item" {
+/* .paragraph-offerings-item" {
   width: 253px;
+} */
+.page-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  background-image: url('/food-delivery/images/fruit-futer.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 1211px 266px;
+}
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+.email {
+  margin-left: auto;
+}
+.footer-logo {
+  margin-right: 148px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-list {
+  display: flex;
+  gap: 20px;
+}
+.info-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6667;
+  color: var(--color-text);
+}
+.info-paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6667;
+  color: var(--text);
+}
+.form-email {
+  display: flex;
+  align-items: flex-end;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+.privat-policy {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.label-email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  row-gap: 12px;
+}
+
+.input-email {
+  width: 279px;
+  height: 42px;
+  left: 869px;
+  top: 3714px;
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-color);
+  border: 0.854167px solid var(--primary-brand);
+  border-radius: 30px;
+  padding: 12px 61.5px 12px 12px;
+}
+.input-email:hover,
+.input-email:focus {
+  border: 0.854167px solid var(--color-text);
+}
+.subscribe-btn {
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  min-width: 103px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--main-color);
+  border: 0.854167px solid var(--color-text);
+  border-radius: 30px;
+  height: 42px;
+}
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  border: 2px solid #ffe450;
 }
