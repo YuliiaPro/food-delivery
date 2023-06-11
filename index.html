@@ -21,13 +21,18 @@
     <!-- Page header -->
     <header class="page-header">
       <div class="header-container container">
-        <a href="" class="logo-link"
-          ><img src="./images/logo.svg" alt="logo"
-        /></a>
+        <a href="./index.html" class="logo-link">
+          <svg class="logo-icon" aria-label="icon logo" width="66" height="52">
+            <use href="./images/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+
         <nav class="header-navigation">
           <ul class="menu-list list">
             <li class="menu-item">
-              <a href="" class="link menu-link current-link">Home</a>
+              <a href="./index.html" class="link menu-link current-link"
+                >Home</a
+              >
             </li>
             <li class="menu-item">
               <a href="" class="link menu-link">About</a>
@@ -44,6 +49,51 @@
           </ul>
           <button class="order-btn" type="button">Order Now</button>
         </nav>
+        <button
+          type="button"
+          class="mobile-menu-open-btn js-open-menu"
+          aria-expanded="false"
+        >
+          <svg
+            class="mobile-menu-icon"
+            aria-label="icon mobile menu"
+            width="28"
+            height="28"
+          >
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="mobile-menu-container container">
+          <button type="button" class="mobile-menu-close-btn js-close-menu">
+            <svg class="modal-close-icon" width="10.76" height="10.76">
+              <use href="./images/icons.svg#icon-close-form"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu-content">
+            <h2 class="visually-hidden">Mobile menu</h2>
+            <ul class="mobile-menu-list list">
+              <li class="mobile-menu-item">
+                <a href="./index.html" class="mobile-link link current-color"
+                  >Home</a
+                >
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-link link">About</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-link link">Service</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-link link">Menu</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="" class="mobile-link link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Page main -->
@@ -51,33 +101,86 @@
       <!-- Enjoy Your Favorite Food From Anywhere -->
       <section class="section-hero">
         <div class="section-hero-container container">
-          <div class="main">
-            <h1 class="main-title">Enjoy Your Favorite Food From Anywhere</h1>
-            <p class="paragraph paragraph-hero">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="order-btn" type="button">Order Now</button>
-          </div>
-          <img
-            class="favorite-food"
-            src="./images/favorite-first.jpg"
-            alt="dish"
-          />
+          <h1 class="main-title">Enjoy Your Favorite Food From Anywhere</h1>
+          <p class="paragraph-hero">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat.
+          </p>
+          <button class="order-btn" type="button" data-modal-open>
+            Order Now
+          </button>
+          <picture class="hero-picture">
+            <source
+              srcset="
+                ./images/hero/hero-desktop@1x.jpg 1x,
+                ./images/hero/hero-desktop@2x.jpg 2x
+              "
+              media="(min-width: 1280px)"
+              width="511"
+              height="511"
+            />
+            <source
+              srcset="
+                ./images/hero/hero-tablet@1x.jpg 1x,
+                ./images/hero/hero-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              width="292"
+              height="292"
+            />
+            <img
+              class="favorite-food-img"
+              src="./images/hero/hero-tablet@1x.jpg"
+              alt="favorite food"
+            />
+          </picture>
         </div>
       </section>
 
       <!-- What’s Special About Our Offerings -->
       <section class="section-offerings">
         <div class="offerings-container container">
-          <img class="offerings-img" src="./images/apple.jpg" alt="apple" />
+          <picture class="offerings-picture">
+            <source
+              srcset="
+                ./images/offerings/apple-desktop@1x.jpg 1x,
+                ./images/offerings/apple-desktop@2x.jpg 2x
+              "
+              media="(min-width: 1280px)"
+              width="502"
+              height="502"
+            />
+            <source
+              srcset="
+                ./images/offerings/apple-tablet@1x.jpg 1x,
+                ./images/offerings/apple-tablet@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+              width="333.59"
+              height="331.62"
+            />
+            <source
+              srcset="
+                ./images/offerings/apple-mobile@1x.jpg 1x,
+                ./images/offerings/apple-mobile@2x.jpg 2x
+              "
+              media="(max-width: 767 px)"
+              width="255.56"
+              height="255.56"
+            />
+            <img
+              class="offerings-img"
+              src="./images/offerings/apple-mobile@1x.jpg"
+              alt="apple"
+            />
+          </picture>
           <div class="offerings-content">
-            <h2 class="section-title section-offerings-title">
+            <h2 class="section-offerings-title">
               What’s Special About Our Offerings
             </h2>
-            <p class="paragraph paragraph-offerings">
+            <p class="paragraph-offerings">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -85,27 +188,62 @@
             </p>
             <ul class="offerings-list list">
               <li class="offerings-item">
+                <div class="offerings-icon-item">
+                  <svg
+                    class="offerings-icon"
+                    aria-label="icon rocket"
+                    width="32"
+                    height="32"
+                  >
+                    <use href="./images/icons.svg#icon-rocket"></use>
+                  </svg>
+                </div>
                 <h3 class="title-item">Fasest Delivery</h3>
-                <p class="paragraph paragraph-offerings-item">
+                <p class="paragraph-offerings">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
               </li>
               <li class="offerings-item">
+                <div class="offerings-icon-item">
+                  <svg
+                    class="offerings-icon"
+                    aria-label="icon touch app"
+                    width="32"
+                    height="32"
+                  >
+                    <use href="./images/icons.svg#icon-touch-app"></use>
+                  </svg>
+                </div>
                 <h3 class="title-item">Easy To Order</h3>
-                <p class="paragraph paragraph-offerings-item">
+                <p class="paragraph-offerings">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros.
                 </p>
               </li>
             </ul>
-            <button class="order-btn" type="button">Order Now</button>
+            <div class="offerings-info">
+              <button class="offerings-order-btn" type="button">
+                Order Now
+              </button>
+              <a href="" class="read-more-link link"
+                >Read More
+                <svg
+                  class="read-more-icon"
+                  aria-label="icon read more"
+                  width="13.67"
+                  height="13.67"
+                >
+                  <use href="./images/icons.svg#icon-read-more"></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Page footer -->
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
       <div class="container">
         <div class="footer-container">
           <a href="" class="logo-link footer-logo"
@@ -162,7 +300,7 @@
           <p class="info-paragraph">2022 FoodSta. All right reserved.</p>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- backdrop -->
     <div class="backdrop is-hidden" data-modal>
@@ -223,5 +361,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
