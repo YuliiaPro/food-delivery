@@ -60,6 +60,17 @@ images {
 .container {
   width: 100%;
 }
+.section-title {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--text);
+}
+.paragraph {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--text);
+}
+
 @media screen and (min-width: 320px) {
   .container {
     width: 320px;
@@ -67,10 +78,19 @@ images {
     margin-right: auto;
   }
 }
-
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+  .section-title {
+    font-size: 42px;
+    line-height: 1.2;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -161,6 +181,8 @@ images {
     padding-right: 16px;
   }
 }
+
+/* --------------------Page header----------------- */
 /* ============mobile menu=================== */
 .mobile-menu {
   position: fixed;
@@ -247,13 +269,8 @@ images {
     display: none;
   }
 }
-/* ==================hero==================== */
-.section-hero-container {
-  position: relative;
-}
-.main {
-  position: relative;
-}
+/* ---------------------mobile menu--------------- */
+/* ==================favorite food==================== */
 
 .main-title {
   font-style: normal;
@@ -270,9 +287,7 @@ images {
   margin-bottom: 28.8px;
 } */
 
-.paragraph {
-  font-style: normal;
-  font-weight: 400;
+.paragraph-hero {
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
@@ -291,6 +306,9 @@ images {
   }
 }
 @media screen and (min-width: 768px) {
+  .section-hero-container {
+    position: relative;
+  }
   .main-title {
     font-size: 42px;
     line-height: 1.2;
@@ -332,8 +350,6 @@ images {
     margin-bottom: 24.29px;
   }
   .paragraph-hero {
-    font-size: 16px;
-    margin-bottom: 40px;
     width: 525px;
     margin-bottom: 50.32px;
   }
@@ -350,114 +366,193 @@ images {
     border: 14px solid var(--primary-brand);
   }
 }
-/* ==============offerings================== */
+/* ================offerings================== */
+
 .section-offerings {
   background-color: var(--primary-brand);
 }
 
+.offerings-img {
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.offerings-icon-item {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  outline: transparent;
+  background-color: var(--modal-background-color);
+  margin-bottom: 8px;
+}
+.title-item {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.offerings-order-btn {
+  min-width: 106px;
+  height: 40px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 6px 18px;
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin-right: 24px;
+}
+.read-more-link {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13.6667px;
+  line-height: 1.5;
+  color: var(--dark);
+}
+.read-more-icon {
+  stroke: var(--dark);
+  margin-left: 3.42px;
+}
+.offerings-info {
+  display: flex;
+  align-items: center;
+}
+/* ===offerings mobile=== */
 @media screen and (max-width: 767px) {
   .offerings-container {
     padding-top: 60px;
     padding-bottom: 60px;
   }
   .offerings-img {
-    display: block;
     width: 100%;
     height: 100%;
     padding: 7px;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.5);
     margin-bottom: 60px;
     margin-left: auto;
     margin-right: auto;
   }
-  .section-offerings-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
-    color: var(--text);
+  .offerings-section-title {
     margin-bottom: 27px;
   }
   .paragraph-offerings {
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.14;
-    color: var(--text);
-  }
-  .title-item {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    color: var(--text);
-    margin-bottom: 16px;
   }
 
   .offerings-icon-item {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    padding: 8px;
-    border: none;
-    outline: transparent;
-    background-color: var(--modal-background-color);
-    margin-bottom: 8px;
     margin-top: 28px;
   }
-  .offerings-order-btn {
-    min-width: 106px;
-    height: 40px;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 6px 18px;
-    border: 2px solid #7eb101;
-    border-radius: 30px;
-    background-color: #ffffff;
-    margin-right: 23.96px;
-  }
-  .read-more-link {
-    display: flex;
-    align-items: center;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13.6667px;
-    line-height: 1.5;
-    color: var(--dark);
-  }
-  .read-more-icon {
-    stroke: var(--dark);
-    margin-left: 3.42px;
-  }
   .offerings-info {
-    display: flex;
     margin-top: 40px;
-    align-items: center;
+  }
+}
+/* ----offerings mobile---- */
+/* ====offerings tablet=== */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .offerings-container {
+    background-image: url('../images/offerings/apple-bg-tablet@1x.png');
+    background-repeat: no-repeat;
+    background-size: 312px 210.42px;
+    background-position: 424px 151px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1279px),
+  (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1279px),
+  (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1279px) {
+  .offerings-container {
+    background-image: url('../images/offerings/apple-bg-tablet@2x.png');
+    background-repeat: no-repeat;
+    background-size: 312px 210px;
   }
 }
 @media screen and (min-width: 768px) {
+  .offerings-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .offerings-img {
-    display: block;
+    width: 334px;
+    height: 332px;
+    padding: 11px;
+    margin-bottom: 65px;
+  }
+  .offerings-section-title {
+    width: 526px;
+    margin-bottom: 20px;
+  }
+  .paragraph-offerings {
+    width: 500px;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+  .paragraph-offerings-item {
+    max-width: 252px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .offerings-icon-item {
+    margin-top: 40px;
+  }
+  .offerings-list {
+    display: flex;
+    align-items: center;
+    column-gap: 116px;
+  }
+  .offerings-info {
+    margin-top: 63px;
+  }
+}
+/* ---offerings tablet---- */
+/* ====offerings desktop=== */
+@media screen and (min-width: 1280px) {
+  .offerings-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .offerings-img {
     width: 502px;
     height: 502px;
     padding: 24px;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.5);
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
-
-  /* .paragraph-offerings {
+  .offerings-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .paragraph-offerings {
+    line-height: 1.5;
+  }
+  .offerings-list {
+    column-gap: 67px;
+  }
+  .read-more-link {
+    display: none;
+  }
+  .offerings-order-btn {
+    margin-right: 0;
+  }
+  .offerings-info {
+    margin-top: 58px;
+  }
+}
+/* ---offerings desktop--- */
+/* .paragraph-offerings {
     width: 500px;
     margin-bottom: 40px;
   }
   .paragraph-offerings-item {
     margin-bottom: 58px;
   }
+  
   .title-item {
     font-style: normal;
     font-weight: 700;
@@ -470,10 +565,7 @@ images {
   .offerings-img {
     margin-right: 126px;
   }
-  .offerings-list {
-    display: flex;
-    align-items: center;
-  }
+  
   .section-offerings-title {
     font-style: normal;
     font-weight: 700;
@@ -483,8 +575,8 @@ images {
     width: 526.17px;
     margin-bottom: 20px;
   } */
-}
-/*  */
+
+/* ------------------offerings---------------- */
 /* 
 .page-footer {
   padding-top: 100px;
